@@ -16,10 +16,10 @@ GoogleMaps(app, key="AIzaSyAZzeHhs-8JZ7i18MjFuM35dJHq70n3Hx4")
 @app.route('/middle', methods=['POST'])
 def middle():
     uid = request.form['ucode']
-    # if uid=="b123":
-    return redirect(url_for('person'))
-    # else:
-        # return redirect(url_for('gov'))
+    if uid=="b123":
+        return redirect(url_for('person'))
+    else:
+        return redirect(url_for('gov'))
 
 @app.route("/person")
 def person():
@@ -190,65 +190,65 @@ def gov():
                  'icon': 'https://files.slack.com/files-pri/T02MNHHJA-F971R9ZFD/ship.png',             
                  'lat': -8.831877,
                  'lng': 116.514790,
-                 'infobox': "<img src='/static/images/budi_anduk.JPG' width='70%' height='80%'/> \
+                 'infobox': "<img src='/static/images/budi_anduk.JPG' width='30%' height='30%'/> \
                             <div> \
-                            <font size='20'> \
+                            <font size='8'> \
                             Budi zunaidi </br> \
                             Domisili : Kerupukan </br> \
-                            Tangkapan bulan ini : 5 ton \
-                            Jenis ikan : 4 jenis \
-                            Tanggal lapor terakhir : Senin 23 Oktober 2017 \
+                            Tangkapan : 5 ton </br> \
+                            Jenis ikan : 4 jenis </br>\
+                            Tanggal : 23-12-2017 </br>\
                             </font></div>"
               },
               {
                  'icon': 'https://files.slack.com/files-pri/T02MNHHJA-F971R9ZFD/ship.png',             
                  'lat': -8.831951,
                  'lng': 116.500989,
-                 'infobox': "<img src='/static/images/budi2.jpg' width='70%' height='80%'/> \
+                 'infobox': "<img src='/static/images/budi2.jpg' width='30%' height='30%'/> \
                             <div> \
-                            <font size='20'> \
+                            <font size='8'> \
                             Ahmad supandi </br> \
                             Domisili : Jeneng agung </br> \
-                            Tangkapan bulan ini : 1 ton \
-                            Jenis ikan : 2 jenis \
-                            Tanggal lapor terakhir : Sabtu 10 Oktober 2017 \
+                            Tangkapan : 1 ton  </br>\
+                            Jenis ikan : 2 jenis  </br>\
+                            Tanggal : 10-11-2017  </br>\
                             </font></div>"
               },
             {
                  'icon': 'https://files.slack.com/files-pri/T02MNHHJA-F971R9ZFD/ship.png',             
                  'lat': -8.831739,
                  'lng': 116.515015,
-                                'infobox': "<img src='/static/images/bambang3.jpeg' width='70%' height='80%'/> \
+                                'infobox': "<img src='/static/images/bambang3.jpeg' width='30%' height='30%'/> \
                             <div> \
-                            <font size='20'> \
+                            <font size='8'> \
                             Bambang </br> \
                             Domisili : Semangkit agung </br> \
-                            Tangkapan bulan ini : 0.5 ton \
-                            Jenis ikan : 1 jenis \
-                            Tanggal lapor terakhir : Selasa 13 Oktober 2017 \
+                            Tangkapan bulan ini : 0.5 ton  </br> \
+                            Jenis ikan : 1 jenis  </br>\
+                            Tanggal : 13-10-2017  </br>\
                             </font></div>"
              },
               {
                  'icon': 'https://files.slack.com/files-pri/T02MNHHJA-F971R9ZFD/ship.png',             
                  'lat': -8.830843,
                  'lng': 116.498367,
-                 'infobox': "<img src='/static/images/budi_anduk.JPG' width='70%' height='80%'/> \
+                 'infobox': "<img src='/static/images/budi_anduk.JPG' width='30%' height='30%'/> \
                             <div> \
-                            <font size='20'> \
+                            <font size='8'> \
                             Budi zunaidi </br> \
                             Domisili : Kerupukan </br> \
-                            Tangkapan bulan ini : 5 ton \
-                            Jenis ikan : 4 jenis \
-                            Tanggal lapor terakhir : Senin 23 Oktober 2017 \
+                            Tangkapan: 5 ton  </br>\
+                            Jenis ikan : 4 jenis  </br>\
+                            Tanggal :  23-9-2017  </br>\
                             </font></div>"
               },
                   {
                 'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
                 'lat':  -8.823247,
                 'lng':  116.506267,
-                'infobox': "<img src='/static/images/googly.jpg' width='70%' height='80%'/> \
+                'infobox': "<img src='/static/images/googly.jpg' width='50%' height='50%'/> \
                             <div> \
-                            <font size='20'> \
+                            <font size='8'> \
                             Ikan tongkol </br> \
                             musim : 10 Januari - 23 Maret </br> \
                             kapasitas : 20 ton \
@@ -258,9 +258,9 @@ def gov():
                 'icon': 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
                 'lat':  -8.828748,
                 'lng':  116.504108,
-                'infobox': "<img src='/static/images/kembong.jpg' width='70%' height='80%'/> \
+                'infobox': "<img src='/static/images/kembong.jpg' width='50%' height='50%'/> \
                             <div> \
-                            <font size='20'> \
+                            <font size='8'> \
                             Ikan kembung </br> \
                             musim : 23 Maret - 5 Agustus </br> \
                             kapasitas : 50 ton \
@@ -644,4 +644,4 @@ def mapview():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, use_reloader=True)
+    app.run(host= '0.0.0.0')
